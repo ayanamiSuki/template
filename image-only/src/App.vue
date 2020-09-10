@@ -27,8 +27,4 @@ p {
   width: 100%;
   word-break: break-all;
 }
-#app {
-  width: 100vw;
-  overflow: hidden;
-}
 </style>
