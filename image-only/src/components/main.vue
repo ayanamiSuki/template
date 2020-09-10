@@ -7,46 +7,6 @@
            :key="index + 'A05'"
            alt="bg" />
     </div>
-    <div class="banner">
-      <img v-for="(item, index) in A01"
-           :src="item.linkImage"
-           :key="index + 'A01'"
-           alt="banner" />
-      <div class="activity-title">
-        <img v-for="(item, index) in A02"
-             :src="item.linkImage"
-             :key="index + 'A02'"
-             alt="title" />
-      </div>
-    </div>
-    <div class="container">
-      <div class="jiugongges-btn flex"
-           id="js_jiugongge">
-        <li class="a3-se"
-            v-for="(item, index) in A03"
-            :key="index + 'A03'"
-            :data-url="item.linkHref"
-            :data-outno="item.tag04"
-            :data-prono="item.tag05"
-            :data-params="item.tag03"
-            :target="item.linkTarget"
-            @click="toActiveDetail(item)">
-          <img :src="item.linkImage" />
-          <section class="text-se">
-            <div class="paragraph-wrap"
-                 v-html="renderTag(item.tag06)"></div>
-          </section>
-        </li>
-      </div>
-      <div class="topBtn"
-           @click="backTop">
-        <img v-for="(item, index) in A04"
-             :src="item.linkImage"
-             :key="index + 'A04'" />
-      </div>
-      <div class="share-info"
-           style="display: none;"></div>
-    </div>
   </div>
 </template>
 
@@ -56,10 +16,10 @@ import bus from "../plugin/bus";
 export default {
   data () {
     return {
-      A01: [],
-      A02: [],
-      A03: [],
-      A04: [],
+      // A01: [],
+      // A02: [],
+      // A03: [],
+      // A04: [],
       A05: [],
       managerMap: {},
       paramsObj: {},
@@ -160,7 +120,6 @@ export default {
     background-color: #fff;
     padding: 0.2rem;
     border-radius: 0.1rem;
-    margin-bottom: 0.5rem;
     .text-se {
       width: 100%;
     }

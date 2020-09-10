@@ -28,7 +28,7 @@ module.exports = {
           mkdir: ["./zip"],
           archive: [{
             source: "./dist",
-            destination: "./zip/商品活动模板(90802).zip"
+            destination: "./zip/宣传海报模板.zip"
           }, ],
         },
       }),
@@ -39,7 +39,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        args[0].title = '活动商品'
+        args[0].title = '海报宣传'
         return args
       })
   },
