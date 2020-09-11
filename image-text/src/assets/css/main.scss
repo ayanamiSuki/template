@@ -1,0 +1,762 @@
+.mask-content {
+  overflow: hidden;
+  height: 100%;
+}
+
+html {
+  display: block;
+  font-size: 100vw/7.5;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  list-style: none;
+}
+
+a,
+img {
+  text-decoration: none;
+  outline: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flex-left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.jiugongges a {
+  display: block;
+  width: 100vw;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.jiugongges a img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.jiugongges-title {
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+}
+
+.jiugongges-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.jiugongges-btn>button {
+  width: 40%;
+  text-align: center;
+  background-color: #ff6058;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.jiugongges-btn>button:last-child {
+  width: 40%;
+  text-align: center;
+  background-color: #efab6e;
+}
+
+.ux-tab-bar {
+  top: 100vh;
+  margin-top: -1.5rem;
+  display: table;
+  width: 100%;
+  height: 1.5rem;
+  padding: 0 0.2rem;
+}
+
+.ux-bar {
+  position: fixed;
+  z-index: 101;
+  right: 0;
+  left: 0;
+  border-bottom: 0;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ux-tab-bar .info {
+  display: table-cell;
+  padding: 0 0.135rem;
+  /* width: 3.648rem; */
+  vertical-align: middle;
+  width: 40%;
+}
+
+.nav-handle {
+  width: 60%;
+}
+
+/* .ux-tab-bar .tab-item {
+  padding: 0 0.27rem;
+} */
+.ux-tab-bar .tab-item {
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ux-tab-bar .iconfont {
+  display: block;
+  font-size: 0.459rem;
+  color: #000;
+}
+
+.custInfo h3 {
+  margin-bottom: 0.135rem;
+  font-size: 0.32rem;
+  color: #000;
+}
+
+.ux-tab-bar .mui-tab-label {
+  font-size: 0.24rem;
+  color: #999;
+}
+
+.custInfo p {
+  text-align: left;
+  font-size: 0.24rem;
+  color: #999;
+}
+
+.mui-ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.custInfo img {
+  display: block;
+  margin-right: 0.189rem;
+  width: 0.945rem;
+  height: 0.945rem;
+  border-radius: 50%;
+}
+
+.info .custInfo {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#js_jiugongge a img {
+  width: 100%;
+}
+
+.ux-pop.active {
+  display: block;
+}
+
+.ux-pop-reserve {
+  width: 6rem;
+  height: auto;
+  background: #fff url(https://test.uxunbank.com/html/shareplat/images/customerManager/pop-bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 0.189rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.27rem rgba(0, 0, 0, 0.1);
+}
+
+.ux-pop {
+  position: relative;
+}
+
+.ux-pop-reserve .close-icon {
+  position: absolute;
+  top: 0.405rem;
+  right: 0.405rem;
+  left: auto;
+  margin-top: 0;
+  font-size: 0.205rem;
+  color: #fff;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.ux-pop-reserve .title {
+  line-height: 1.72rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.34rem;
+}
+
+.ux-pop-reserve .content {
+  padding: 0.15rem;
+  padding-top: 0.3rem;
+  text-align: center;
+}
+
+.input-outer .btn.disabled {
+  opacity: 1;
+}
+
+.input-outer .btn {
+  display: block;
+  margin: 0 auto;
+  width: 3.945rem;
+  font-size: 0.34rem;
+  line-height: .8rem;
+  color: #fff;
+  background: #409df4;
+  border-radius: 0.594rem;
+  box-shadow: 0 0.162rem 0.324rem rgba(64, 157, 244, 0.4);
+}
+
+.icon-guanbi1:before {
+  content: "\e843";
+}
+
+.icon-chenggong:before {
+  content: "\e842";
+}
+
+.tips-outer h3 {
+  margin-bottom: 0.27rem;
+  line-height: 1;
+  font-size: 0.36rem;
+  color: #409df4;
+}
+
+.tips-outer p {
+  font-size: 0.28rem;
+  color: #999;
+}
+
+.tips-outer .iconfont {
+  display: block;
+  margin-bottom: 0.54rem;
+  font-size: 1.486rem;
+  color: #409df4;
+}
+
+#js_jiugongge {
+  padding-bottom: 1.62rem;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.input-outer {
+  border-bottom: 0.027rem solid #ddd;
+  padding: 1px 0;
+  display: flex;
+  min-height: .8rem;
+  align-items: center;
+}
+
+.input-outer>span {
+  font-size: 0.28rem;
+  color: #a0a0a0;
+  display: inline-block;
+  width: 40%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.input-outer>input {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 0.28rem;
+  border: 0;
+  color: #595959;
+  width: 50%;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#js_foot {
+  border: 0;
+}
+
+#js_inputItem .checkbox-tpl {
+  display: flex;
+}
+
+#js_inputItem .checkbox-tpl>div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#js_inputItem .checkbox-tpl>div.check-wrap {
+  padding-left: 0.3rem;
+}
+
+#js_inputItem .checkbox-tpl>div>.checkbox-item {
+  width: 50%;
+  text-align: left;
+  font-size: 0.37rem;
+  color: #595959;
+  padding-bottom: 0.2rem;
+}
+
+#js_inputItem .checkbox-tpl>div>.checkbox-item input {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  width: 1px;
+  font-size: 1px;
+  height: 1px;
+  padding-right: 18px;
+}
+
+#js_inputItem .checkbox-tpl>div>.checkbox-item label {
+  padding-left: 0.1rem;
+}
+
+#js_inputItem .checkbox-tpl {
+  padding: 0.2rem;
+  padding-left: 0.22rem;
+  padding-bottom: 0;
+}
+
+.tpl-desc {
+  white-space: nowrap;
+  color: #a0a0a0;
+  font-size: 0.35rem;
+}
+
+#js_foot {
+  padding-top: 0.3rem;
+}
+
+#textarea {
+  font-size: 0.35rem;
+  padding: 5px;
+}
+
+.remark {
+  margin-top: 0.3rem;
+}
+
+.isrequired {
+  position: relative;
+  padding-left: 0.1rem;
+}
+
+.isrequired::before {
+  position: absolute;
+  top: -1px;
+  left: -2px;
+  content: "*";
+  color: red;
+  z-index: 1;
+}
+
+.check-wrap>div {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"]:checked:before {
+  font-family: iconfont;
+  content: "\e828";
+  background: #409df4;
+  border-color: #409df4;
+}
+
+.checkbox-group input[type="checkbox"]:before {
+  content: "";
+  display: inline-block;
+  width: 0.486rem;
+  height: 0.486rem;
+  font-size: 0.297rem;
+  text-align: center;
+  color: #fff;
+  line-height: 0.486rem;
+  background: #fff;
+  border: 0.027rem solid #ddd;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.mask-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 102;
+  padding: 0.3rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.qrcode-mask {
+  position: fixed;
+  z-index: 102;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrcode-mask .qrcode-wrap {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+}
+
+.qrcode-mask .qrcode-wrap img {
+  width: 100%;
+}
+
+.qrcode-mask .qrcode-wrap>span {
+  padding: 0.3rem;
+  width: 100%;
+  font-size: 0.28rem;
+  color: #885d43;
+  background: url(https://test.uxunbank.com/html/shareplat/images/customerManager/10088/wechat-tit.png) left top no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0.2rem 0.2rem 0 0;
+  overflow: hidden;
+}
+
+.qr-info {
+  background: #fff;
+  color: #595959;
+  font-size: 0.32rem;
+  width: 100%;
+}
+
+.qrcode-mask .qrcode-wrap a.close-icon {
+  position: absolute;
+  top: -1rem;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border: 2px solid #fff;
+  color: #fff;
+  width: .8rem;
+  height: .8rem;
+  text-align: center;
+  line-height: 0.75rem;
+}
+
+.qrcode-mask .qrcode-wrap .qr-info {
+  text-align: center;
+  border-radius: 0 0 0.2rem 0.2rem;
+  padding-bottom: 0.3rem;
+}
+
+#js_address {
+  margin: 0;
+}
+
+.nav-handle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 0.1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container img {
+  width: 100%;
+}
+
+#js_jiugongge {
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.26rem;
+  padding-bottom: 0.78rem;
+}
+
+#js_jiugongge>li>p {
+  color: #595959;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#js_jiugongge>li>p:nth-child(3) {
+  color: red;
+}
+
+.topBtn {
+  padding-bottom: 0.78rem;
+}
+
+.text-se p {
+  text-align: center;
+  color: #595959;
+  margin-bottom: 0;
+}
+
+.text-se p.price-se {
+  color: red;
+}
+
+.price-se .price-con {
+  font-size: 10px;
+}
+
+.tag06 {
+  display: none;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.bg img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.banner {
+  position: relative;
+  width: 100vw;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.activity-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+}
+
+.paragraph-wrap p:nth-child(2) {
+  color: red;
+  font-size: 0.3rem;
+}
+
+.paragraph-wrap p:nth-child(3) {
+  background: url(../assets/images/bg_btn.png) center center no-repeat;
+  background-size: 100% 100%;
+  padding: 0.1rem 0.3rem;
+  padding-bottom: 0.2rem;
+  color: #fff;
+}
+
+
+/* topbar 新增*/
+#js_bar2 {
+  background: url(../assets/images/card-bg.png) left center no-repeat;
+  background-size: 100% 100%;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 95%;
+  border-radius: 0.3rem;
+  position: relative;
+  margin: 0.3rem 0;
+  overflow: hidden;
+}
+
+.qrcode-mask2 {
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.qrcode-mask2 img {
+  width: 75%;
+  height: auto;
+}
+
+.practitionerCert-wrap {
+  text-align: center;
+  position: relative;
+}
+
+.practitionerCert-wrap .cer1 {
+  color: #05388b;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  font-size: 16px;
+}
+
+.practitionerCert-wrap .cer2 {
+  color: #05388b;
+  position: absolute;
+  top: 70%;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  font-size: 14px;
+}
+
+.js2x {
+  display: flex;
+  justify-content: space-between;
+}
+
+#js_bar2 .nav-handle {
+  flex-direction: column;
+  width: 95%;
+}
+
+#js_bar2 .custInfo img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.js2x li span {
+  font-size: 0.26rem;
+}
+
+#js_bar2 .rt-top-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 0.3rem;
+  font-size: 0.24rem;
+  color: #c8842a;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.1rem 0.2rem;
+}
+
+#js_cmInfo2 {
+  font-size: 0.34rem;
+  font-weight: 100;
+}
+
+#js_cmInfo2 .no {
+  font-size: 0.28rem;
+  padding-left: 0.1rem;
+}
+
+#js_address2 {
+  font-size: 0.28rem;
+  color: rgba(52, 52, 61, 0.7);
+}
+
+#js_bar2 .custInfo img {
+  margin-right: 0.3rem;
+}
+
+.radio-item label {
+
+  font-size: .28rem;
+}
+
+.radio-item label {
+  padding: 0 3px;
+}
+
+// 样式
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+
+.checkbox-item label {
+  font-size: .28rem;
+  color: #666;
+}
+
+.INPUT_CHECKBOX_ITEM_WRAP {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.INPUT_CHECKBOX_ITEM_WRAP span {
+  width: 49%;
+  flex-shrink: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: .1rem;
+  box-sizing: border-box;
+}
+
+.INPUT_CHECKBOX_ITEM_WRAP>label {
+  display: flex;
+  align-items: center;
+  width: 1rem;
+
+}

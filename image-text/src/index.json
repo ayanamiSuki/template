@@ -1,0 +1,63 @@
+{
+  "actPageSubType": "",
+  "actPageType": "005",
+  "defaultViewPath": "",
+  "templateAreas": [{
+      "areaId": "A01",
+      "areaName": "banner图",
+      "areaPosition": "0,65,375,363",
+      "itemMinSize": 1,
+      "itemMaxSize": 1,
+      "itemSizeStep": 1,
+      "type": "001",
+      "url": ""
+    },
+    {
+      "areaId": "A02",
+      "areaName": "楼层标题",
+      "areaPosition": "0,363,375,413",
+      "itemMinSize": 1,
+      "itemMaxSize": 1,
+      "itemSizeStep": 1,
+      "type": "001",
+      "url": ""
+    },
+    {
+      "areaId": "A03",
+      "areaName": "商品展示区",
+      "areaPosition": "0,415,375,801",
+      "itemMinSize": 1,
+      "itemMaxSize": 10,
+      "itemSizeStep": 1,
+      "type": "001",
+      "url": "",
+      "itemRowMaxSize": 3,
+      "textNames": "商品名称,商品价格,按钮"
+    },
+    {
+      "areaId": "A04",
+      "areaName": "返回顶部",
+      "areaPosition": "0,807,375,860",
+      "itemMinSize": 1,
+      "itemMaxSize": 1,
+      "itemSizeStep": 1,
+      "type": "001",
+      "url": ""
+    },
+    {
+      "areaId": "A05",
+      "areaName": "页面背景图",
+      "areaPosition": "0,862,375,927",
+      "itemMinSize": 1,
+      "itemMaxSize": 1,
+      "itemSizeStep": 1,
+      "type": "001",
+      "url": ""
+    }
+  ],
+  "templateDesc": "商品活动模板",
+  "templateName": "商品活动模板91003",
+  "templateNo": "t_10086_20200910_03b",
+  "transChannel": "007",
+  "version": 1
+}

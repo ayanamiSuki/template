@@ -1,0 +1,20 @@
+{
+  "actPageSubType": "单页面",
+  "actPageType": "005",
+  "defaultViewPath": "",
+  "templateAreas": [{
+    "areaId": "A05",
+    "areaName": "海报区域",
+    "areaPosition": "0,80,375,800",
+    "itemMinSize": 1,
+    "itemMaxSize": 20,
+    "itemSizeStep": 1,
+    "type": "001",
+    "url": ""
+  }],
+  "templateDesc": "宣传海报模板",
+  "templateName": "宣传海报模板91004",
+  "templateNo": "t_10086_20200910_4a",
+  "transChannel": "007",
+  "version": 1
+}
