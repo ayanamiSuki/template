@@ -9,7 +9,7 @@ let contentType = {
   'content-type': 'application/x-www-form-urlencoded'
 };
 let instance = axios.create({
-  baseURL: process.env.NODE_ENV === "development" ? '' : UX_CONFIG.HOST,
+  baseURL: UX_CONFIG.HOST,
   timeout: 10000,
   headers: Object.assign(UX_CONFIG.reqHeaders, contentType)
 });
