@@ -1,47 +1,47 @@
 <template>
   <div class="header-component">
     <div class="jiugongges-btn">
-      <nav class="ux-bar ux-tab-bar"
-           id="js_bar"
-           v-if="manageBar === '2'">
+      <nav class="ux-bar ux-tab-bar" id="js_bar" v-if="manageBar === '2'">
         <div class="info">
           <div class="custInfo dbox bac">
-            <img :src="workphoto"
-                 id="js_slt" />
+            <img :src="workphoto" id="js_slt" />
             <div class="bf1">
               <h3 id="js_cmInfo">{{ cmanager_manager_name }}</h3>
-              <p id="js_address"
-                 class="mui-tab-label mui-ellipsis-2">
+              <p id="js_address" class="mui-tab-label mui-ellipsis-2">
                 {{ cmanager_instName }}
               </p>
             </div>
           </div>
         </div>
         <div class="nav-handle">
-          <li class="tab-item"
-              id="js_work"
-              @click="toPersonalWork">
+          <li class="tab-item" id="js_work" @click="toPersonalWork">
             <span class="iconfont icon-gongzuoshi"></span>
             <span class="mui-tab-label">工作室</span>
           </li>
-          <li class="tab-item"
-              id="js_call"
-              :call="cmanager_phone_no"
-              @click="callTel">
+          <li
+            class="tab-item"
+            id="js_call"
+            :call="cmanager_phone_no"
+            @click="callTel"
+          >
             <span class="iconfont icon-shouji"></span>
             <span class="mui-tab-label">电话联系</span>
           </li>
-          <li class="tab-item "
-              id="js_showQRCode"
-              :class="!wxQRcode && 'disabled'"
-              @click="showQRcode = true">
+          <li
+            class="tab-item "
+            id="js_showQRCode"
+            :class="!wxQRcode && 'disabled'"
+            @click="showQRcode = true"
+          >
             <span class="iconfont icon-weixin"></span>
             <span class="mui-tab-label">微信联系</span>
           </li>
-          <li class="tab-item"
-              id="js_reserve"
-              v-if="reserve"
-              @click="ShowReserve = true">
+          <li
+            class="tab-item"
+            id="js_reserve"
+            v-if="reserve"
+            @click="ShowReserve = true"
+          >
             <span class="iconfont icon-yuyue"></span>
             <span class="mui-tab-label">预约</span>
           </li>
@@ -49,45 +49,48 @@
       </nav>
     </div>
     <div class="jiugongges-btn">
-      <nav id="js_bar2"
-           v-if="manageBar === '1'">
+      <nav id="js_bar2" v-if="manageBar === '1'">
         <div class="rt-top-info">{{ cmanager_instName }}</div>
         <div class="info">
           <div class="custInfo dbox bac">
-            <img :src="workphoto"
-                 id="js_slt2" />
+            <img :src="workphoto" id="js_slt2" />
           </div>
         </div>
         <div class="nav-handle">
-          <div class="bf1"
-               style="text-align: left;">
+          <div class="bf1" style="text-align: left;">
             <h3 id="js_cmInfo2">
-              <span class="name">{{ cmanager_manager_name }}</span><span class="no">{{ cmanager_employee_no }}</span>
+              <span class="name">{{ cmanager_manager_name }}</span
+              ><span class="no">{{ cmanager_employee_no }}</span>
             </h3>
-            <p id="js_address2"
-               class="mui-tab-label mui-ellipsis-2">
+            <p id="js_address2" class="mui-tab-label mui-ellipsis-2">
               {{ personalSign }}
             </p>
           </div>
           <div class="js2x">
-            <li class="tab-item"
-                id="js_work2"
-                :class="!certi && 'disabled'"
-                @click="showCerti=true">
+            <li
+              class="tab-item"
+              id="js_work2"
+              :class="!certi && 'disabled'"
+              @click="showCerti = true"
+            >
               <i class="iconfont  icon-yuminzhengshu"></i>
               <span class="mui-tab-label">看证书</span>
             </li>
-            <li class="tab-item"
-                id="js_call2"
-                :call="cmanager_phone_no"
-                @click="callTel">
+            <li
+              class="tab-item"
+              id="js_call2"
+              :call="cmanager_phone_no"
+              @click="callTel"
+            >
               <span class="iconfont icon-shouji"></span>
               <span class="mui-tab-label">电话联系</span>
             </li>
-            <li class="tab-item"
-                id="js_showQRCode2"
-                :class="!wxQRcode && 'disabled'"
-                @click="showQRcode = true">
+            <li
+              class="tab-item"
+              id="js_showQRCode2"
+              :class="!wxQRcode && 'disabled'"
+              @click="showQRcode = true"
+            >
               <span class="iconfont icon-weixin"></span>
               <span class="mui-tab-label">微信联系</span>
             </li>
@@ -97,26 +100,33 @@
     </div>
     <transition name="fade">
       <!-- 预约 -->
-      <reserve v-if="ShowReserve"
-               @closeIconreserve="ShowReserve = false"
-               @subSend="subSendparam"
-               :showForm="showForm"
-               :isSend="isSend"
-               :reserveData="reserveData"></reserve>
+      <reserve
+        v-if="ShowReserve"
+        @closeIconreserve="ShowReserve = false"
+        @subSend="subSendparam"
+        :showForm="showForm"
+        :isSend="isSend"
+        :reserveData="reserveData"
+      ></reserve>
       <!-- ./ -->
     </transition>
     <transition name="fade">
       <!-- 二维码 -->
-      <qrcode v-if="showQRcode"
-              @closeIcon="showQRcode = false"
-              :cmanager_manager_name="cmanager_manager_name"></qrcode>
+      <qrcode
+        v-if="showQRcode"
+        @closeIcon="showQRcode = false"
+        :cmanager_manager_name="cmanager_manager_name"
+        :wxQRcode="wxQRcode"
+      ></qrcode>
       <!-- ./ -->
     </transition>
     <transition name="fade">
       <!-- 证书 -->
-      <practitioner-cert :certi="certi"
-                         v-if="certi && showCerti"
-                         @closeMask="showCerti=false;"></practitioner-cert>
+      <practitioner-cert
+        :certi="certi"
+        v-if="certi && showCerti"
+        @closeMask="showCerti = false"
+      ></practitioner-cert>
       <!-- ./ -->
     </transition>
   </div>
@@ -137,7 +147,7 @@ export default {
     qrcode,
     reserve,
   },
-  data () {
+  data() {
     return {
       uxPlugin: "",
       paramsObj: "",
@@ -145,7 +155,8 @@ export default {
       manageBar: 0,
       reserve: false,
       managerInfo: {},
-      workphoto: "https://sp.uxunchina.cn/uxunimg2/middleActivity/actPageImg/202009/db860447-f077-41d0-8eda-cc4d4594a8e6.jpeg",
+      workphoto:
+        "https://sp.uxunchina.cn/uxunimg2/middleActivity/actPageImg/202009/db860447-f077-41d0-8eda-cc4d4594a8e6.jpeg",
       wxQRcode: "",
       personalSign: "",
       certi: "",
@@ -159,10 +170,10 @@ export default {
       showQRcode: false,
       ShowReserve: false,
       reserveData: "",
-      pageId: ''
+      pageId: "",
     };
   },
-  mounted () {
+  mounted() {
     this.uxPlugin = new Plugin();
     this.getCurrentFp();
     // document.querySelector('.ux-bar').style.top =
@@ -170,7 +181,7 @@ export default {
   },
   methods: {
     //获取fp
-    getCurrentFp () {
+    getCurrentFp() {
       this.uxPlugin.fp((res) => {
         if (res) {
           //获取fp后开始
@@ -180,7 +191,7 @@ export default {
         }
       });
     }, //获取url数据
-    getParams () {
+    getParams() {
       this.paramsObj = this.uxPlugin.evalParams();
       if (this.paramsObj.d) {
         // let paramsObj = Object.assign({}, this.paramsObj);
@@ -194,7 +205,7 @@ export default {
       }
     },
     //获取分享的信息
-    async ajaxGetShareById (actid, shareId) {
+    async ajaxGetShareById(actid, shareId) {
       let { actShareRsp, formsTemplate } = await this.$http.post(
         "shareplat/share/getShareById",
         {
@@ -206,7 +217,7 @@ export default {
         this.pageId = actShareRsp.pageId;
         this.actShareRsp = actShareRsp;
         this.manageBar = actShareRsp.tag01;
-        document.title = actShareRsp.shareTitle || '';
+        document.title = actShareRsp.shareTitle || "";
       }
       if (formsTemplate) {
         //预约
@@ -216,7 +227,7 @@ export default {
       //获取分享信息
       this.ajaxGetShareInfo(shareId);
     },
-    async ajaxGetShareInfo (shareId) {
+    async ajaxGetShareInfo(shareId) {
       let res = await this.$http.post("shareplat/share/getShareInfo", {
         reqContent: JSON.stringify({ shareId }),
         deviceInfo: "",
@@ -224,7 +235,7 @@ export default {
       this.managerInfo = res;
       this.handleShareInfo(res);
     },
-    handleShareInfo (dataMap) {
+    handleShareInfo(dataMap) {
       this.cmanager_manager_name = dataMap.cmanager_manager_name;
       this.cmanager_instName = dataMap.cmanager_instName;
       this.cmanager_phone_no = dataMap.cmanager_phone_no;
@@ -246,7 +257,7 @@ export default {
       }
       this.ajaxSaveShareInfo(dataMap);
     },
-    async ajaxSaveShareInfo (shareDataMap) {
+    async ajaxSaveShareInfo(shareDataMap) {
       let paramsObj = this.paramsObj;
       let contentData = {
         bankcode: "99995",
@@ -266,10 +277,10 @@ export default {
         bus.$emit("setPageId", this.pageId);
       }
     },
-    subSendparam (data) {
+    subSendparam(data) {
       this.ajaxSendparam("submmit", this.thisShareDataMap, data);
     },
-    async ajaxSendparam (operType, map, subData = {}) {
+    async ajaxSendparam(operType, map, subData = {}) {
       let formData = {};
       let paramsObj = this.paramsObj;
       let uxuuid = this.uxPlugin.getuuid();
@@ -314,13 +325,13 @@ export default {
         this.isSend = true;
       }
     },
-    callTel () {
+    callTel() {
       location.href = "tel:" + this.cmanager_phone_no;
     },
-    toPersonalWork () {
+    toPersonalWork() {
       location.href = UX_CONFIG.WORK_URL + this.paramsObj.d;
     }, //微信sdk
-    setWXSDK: function (info) {
+    setWXSDK: function(info) {
       wxconfig.wx(wx, this, UX_CONFIG, info);
     },
   },
