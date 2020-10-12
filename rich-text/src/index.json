@@ -1,0 +1,31 @@
+{
+  "actPageSubType": "",
+  "actPageType": "005",
+  "defaultViewPath": "",
+  "templateAreas": [{
+      "areaId": "A01",
+      "areaName": "banner图",
+      "areaPosition": "0,60,360,225",
+      "itemMinSize": 1,
+      "itemMaxSize": 1,
+      "itemSizeStep": 1,
+      "type": "001",
+      "url": ""
+    },
+    {
+      "areaId": "A02",
+      "areaName": "富文本",
+      "areaPosition": "12,250,360,414",
+      "itemMinSize": 1,
+      "itemMaxSize": 1,
+      "itemSizeStep": 1,
+      "type": "003",
+      "url": ""
+    }
+  ],
+  "templateDesc": "富文本模板",
+  "templateName": "富文本模板92401",
+  "templateNo": "t_10086_20200924_01",
+  "transChannel": "007",
+  "version": 1
+}
